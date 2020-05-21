@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>doc파일 다운로드 페이지</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <article>
+            <h3>1. 품의서 기초 정보 : 직접 입력</h3>
+            <table>
+                <tr>
+                    <th>개인번호</th>
+                    <td>O O O 고객센터 2020-  호</td>
+                    <th>기안일자</th>
+                    <td>2020.05.21</td>
+                    <th>담당자</th>
+                    <td>홍 길 동</td>
+                </tr>
+                <tr>
+                    <th>제  목</th>
+                    <td colspan="6">O O O 고객件 VOC처리 결과 (민원해지)</td>
+                </tr>
+            </table>
+        </article>
+
+        <article>
+            <h3>2. VOC 및 계약정보 : 직접 입력</h3>
+            <table>
+                <tr>
+                    <th rowspan="2" class="th-vertical">VOC</th>
+                    <th colspan="2">VOC NO</th>
+                    <td colspan="2"></td>
+                    <th>고객명</th>
+                    <td></td>
+                    <th>VOC 코드</th>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">쟁점내용</th>
+                    <td colspan="7"></td>
+                </tr>
+                <tr>
+                    <th rowspan="4" class="th-vertical">계약사항</th>
+                    <th colspan="2">계약번호</th>
+                    <th>계약자</th>
+                    <th>계약일자</th>
+                    <th>보험종류</th>
+                    <th>종납사항</th>
+                    <th>月보험료</th>
+                    <th>실납입 P</th>
+                    <th>해지환급금</th>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="th-20"></th>
+                    <td>件</td>
+                    <th>실납입 P</th>
+                    <td colspan="2"></td>
+                    <th>해지환급금</th>
+                    <td></td>
+                    <th>분쟁금액</th>
+                    <td></td>
+                </tr>
+            </table>
+        </article>
+
+        <article>
+            <h4>3~4. VOC 개요, 조사내용, 처리의견 : 직접 입력</h4>
+            <table>
+                <tr>
+                    <td colspan="2" class="bold">3. VOC개요</td>
+                </tr>
+                <tr>
+                    <th>VOC내용</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>경과사항</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"class="bold">4. 조사 내용 및 처리의견</td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+
+            </table>
+        </article>
+      </section>
+    </div>
+    <form action="/download" method="POST">
+        <input id="fileName" name="fileName" hidden></input>
+        <input id="htmlTag" name="htmlTag" hidden></input>
+        <input id="styleTag" name="styleTag" hidden></input>
+      <button id="btnDownload">DownLoad</button>
+    </form>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

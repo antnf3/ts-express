@@ -18,7 +18,7 @@ App.set("port", process.env.PORT);
 App.use(logger("dev"));
 App.use(express.static(path.join(__dirname, "client/public")));
 App.use(express.json());
-App.use(express.urlencoded({ extended: false }));
+App.use(express.urlencoded({ extended: true }));
 App.use(cookieParser(process.env.COOKIE_SECRET));
 
 App.use("/", indexRouter);
