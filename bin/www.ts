@@ -2,6 +2,7 @@ import http from "http";
 // const debug = require("debug")("ts-node:server");
 import debug from "debug";
 import App from "../src/index";
+import "dotenv/config";
 
 const port = normalizePort(process.env.PORT || "3000");
 App.set("port", port);
