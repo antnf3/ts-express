@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+import axios, { AxiosResponse } from "axios";
 const router = express.Router();
 
 import { sign, verify } from "jsonwebtoken";
@@ -11,6 +12,22 @@ router.get("/", isVerify, (req: ICustomRequest, res: Response) => {
   console.log(req.decoded);
 
   res.render("index");
+});
+
+router.get("/home", async (req: ICustomRequest, res: Response) => {
+  try {
+    const response: AxiosResponse = await axios.request({
+      method: "post",
+      url: `http://shangwu.iptime.org:8080/users/queries`,
+      data: {
+        mapFile: "index.search",
+        inData: { USER_ID: "k947114585", USE_YN: "Y" },
+      },
+    });
+    res.send(response.data);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 router.post("/download", isVerify, (req: ICustomRequest, res: Response) => {
