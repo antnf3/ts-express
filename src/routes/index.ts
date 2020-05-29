@@ -14,15 +14,13 @@ router.get("/", isVerify, (req: ICustomRequest, res: Response) => {
   res.render("index");
 });
 
-router.get("/home", async (req: ICustomRequest, res: Response) => {
+router.post("/home", async (req: ICustomRequest, res: Response) => {
   try {
+    // console.log(req.body);
     const response: AxiosResponse = await axios.request({
       method: "post",
       url: `http://shangwu.iptime.org:8080/users/queries`,
-      data: {
-        mapFile: "index.search",
-        inData: { USER_ID: "k947114585", USE_YN: "Y" },
-      },
+      data: req.body,
     });
     res.send(response.data);
   } catch (err) {
